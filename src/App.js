@@ -23,16 +23,10 @@ function getArticleTem() {
   }
 }
 
-// 定义组件
-const Button = () => {
-  // 业务逻辑组件逻辑
-  return <button>click me!</button>
-}
-
 function App() {
   // 基础事件绑定
   const hadnleClick = (name, e) => {
-    console.log('button被点击了', name,e);
+    console.log('button被点击了', name, e);
   }
   return (
     <div className="App">
@@ -46,9 +40,9 @@ function App() {
       </ul>
 
       {/* 基础条件渲染 */}
-      {/* 逻辑与 && */}
+      {/* 逻辑与 && 条件为真显示 */}
       {isLogin && <span>this is span</span>}
-      {/* 逻辑或 || */}
+      {/* 逻辑或 || 条件为假显示 */}
       {isLogin || <span>this is span</span>}
       {/* 三元运算 */}
       {isLogin ? <span>jack</span> : <span>mark</span>}
@@ -58,15 +52,8 @@ function App() {
       {getArticleTem()}
 
       <button onClick={(e) => {
-        hadnleClick('jack',e);
+        hadnleClick('jack', e);
       }}>click me</button>
-      <br></br>
-
-      {/* 使用组件 */}
-      {/* 自闭和 */}
-      <Button />
-      {/* 成对标签 */}
-      <Button></Button>
 
     </div>
   );
